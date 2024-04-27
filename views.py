@@ -19,7 +19,7 @@ def home():
 def trainer():
     return render_template("trainer.html", user=current_user.username)
 
-@views.route("/profile") # The profile page route
+@views.route("/profile", methods=['GET','POST']) # The profile page route
 def profile():
     today = datetime.today() # The current clock time the user's in
     logs = show_profile(current_user.username) # uses the show_profile function with the signed in user as an argument, for more explainion go the profile_show.py file
@@ -32,16 +32,12 @@ def profile():
                 month = int(request.form["month"])
                 year = int(request.form["year"])
                 workout_day = f"{day} {calendar.month_name[month]} {year}" # After taking the date's inputs from the user, it creates a variable with given values and stores it in the workout_day variable
-                if workout_day:
-                    pass
-                else:
-                    return render_template("profile.html")
             except: # if the user's input is empty or has letters they get redirect into the profile page
                 return redirect("/profile")
     len_logs = 0
     return render_template("profile.html", user=current_user, showing = logs, length = len_logs, day=workout_day)
 
-@views.route("/<exercise>",methods=['GET','POST']) # a dynamic route with GET and POST methods
+@views.route("/<exercise>", methods=['GET','POST']) # a dynamic route with GET and POST methods
 @login_required
 def exercise(exercise):
     try:
