@@ -1,0 +1,58 @@
+
+{% extends "base nav.html" %}
+{% block body %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>D Fitness</title>
+
+    <!-- Links to stylesheets -->
+    <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href="/static/nav-bar.css">
+
+    <!-- Link to Font Awesome icon library -->
+    <script src="https://kit.fontawesome.com/04aa87af1f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    
+    <div class="main">
+    <div class="quote">
+        <h1>Reach your Goals</h1>
+
+        <a href="trainer">Get Started</a>
+    </div>
+    <div class="container">
+        <div class="app-name">
+            <h1>D Fitness</h1>
+            <i class="fa-solid fa-dumbbell"></i>
+        </div>
+    <div class="info">
+
+        <!-- range for sets -->
+        <div class="sets">
+        <h2>Set Range</h2>
+        <p>Set range for beginners: 1-3 sets</p>
+        <p>Set range for advanced lifters: 4-5 sets</p>
+        </div>
+
+         <!-- range for sets -->
+        <div class="reps">
+        <h2>Rep Range</h2>
+        <p>Rep range for beginners: 6-8 reps</p>
+        <p>Rep range for advanced lifters: 10-12 reps</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+    <!-- Link to The JavaScript files -->
+    <script src="/static/home.js"></script>
+    <script src="/static/navToggle.js"></script>
+{% endblock %}    
+</body>
+</html>
