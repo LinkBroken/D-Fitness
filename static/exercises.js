@@ -167,7 +167,7 @@ function displayContent(exercises) {
                 body: formData
             }).then(response => {
                 if (response.ok) {
-                    window.prompt(('Added successfully.'));
+                    window.alert(('Added successfully.'));
                 } else {
                     console.error('failed');
                 }
