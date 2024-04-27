@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background:rgb(15, 15, 15);
+    color: #333;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    color: #f9f9f9;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.muscle-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.muscle-groups > div {
+    background-color: #171717;
+    border-radius: 20px;
+    padding: 20px;
+    width: calc(40% - 20px); 
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.muscle-groups > div > h3 {
+    color: #f9f9f9; 
+    margin-bottom: 10px;
+    font-size: 1.2rem; 
+}
+
+.muscle-groups > div > img {
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.muscle-groups > div > p {
+    color: #ffffff; 
+    opacity: 0.9;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.muscle-groups > div > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #009688;
+    transition: background-color 0.3s ease;
+}
+
+.muscle-groups > div > a:hover {
+    background-color: #777;
+}
