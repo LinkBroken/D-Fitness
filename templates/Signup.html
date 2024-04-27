@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/Sign Up.css">
+
+</head>
+<body>
+    <div class="main">
+    <div class="login-form">
+    <h1 style="text-align: center; text-decoration: underline; font-style: italic;">Sign Up</h1>
+    <form action="/register" class="form" method="POST">
+        <h3>User Name:</h3> <input type="text" placeholder="name" name="name">
+        <h3>Email:</h3> <input type="email" placeholder="email" name="email" >
+        <h3>Age:</h3> <input type="number" placeholder="age" min="18" max="99" name="age">
+        <h3>Weight:</h3> <input type="number" placeholder="height" min="40" max="200" name="weight">kg
+        <h3>Height:</h3> <input type="number" placeholder="height" min="150" max="200" name="height"> cm
+        <h3>Password:</h3> <input type="password" placeholder="Password" name="password" id="pass">
+        <br>
+        <input type="submit" id="submit" value="Sign Up" class="submit">
+        
+    </form>
+    <button><a style="text-decoration: none; color :white" href="/login"> Login</a></button>
+
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+    <p style="margin:0 auto; background-color: brown; color: white; width: fit-content; list-style-type: none;">{{ message }}</p>
+    {% endfor %}
+    {% endwith %}
+    </div>
+</div>
+</body>
+</html>
