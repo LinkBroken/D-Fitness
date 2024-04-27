@@ -1,0 +1,26 @@
+{% extends "base nav.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abs</title>
+    <link rel="stylesheet" href="/static/exercises.css">
+    <link rel="stylesheet" href="/static/nav-bar.css">
+</head>
+<body>
+
+    <div class="exercises"></div>
+    {% with messages = get_flashed_messages() %}
+    {{messages}}
+    {% for message in messages %}
+    <li style="list-style: none; color: red; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">{{ message }}</li>
+    {% endfor %}
+    {% endwith %}
+<script src="/static/exercises.js"></script>
+<script src="/static/navToggle.js"></script>
+
+</body>
+</html>
+{%  endblock %}
