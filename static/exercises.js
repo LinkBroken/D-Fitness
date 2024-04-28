@@ -151,12 +151,13 @@ function displayContent(exercises) {
         sets.name = "sets"
         sets.min = 1;
         sets.max = 4;
-
+        sets.required = true;
+        
         reps.type = "number";
         reps.name = "reps"
         reps.min = 1;
         reps.max = 15;
-
+        sets.required = true;
         // Add event listener for form submission
         form.addEventListener("submit", function() {
             const formData = new FormData(form)
