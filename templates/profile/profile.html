@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/static/css/profile.css">
+  <link rel="stylesheet" href="/static/css/nav-bar.css">
+  <script src="https://kit.fontawesome.com/04aa87af1f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Extends from the base nav.html template -->
+{% extends "nav/base nav.html" %}
+{% block nav %}
+{{ super() }} <!-- Renders the nav block from the parent template -->
+{% endblock %}
+
+{% block body %}
+<div class="main">
+  <div class="profile">
+    <!-- Display user information -->
+    <div class="info-container">
+      <h3>Information Summary</h3>
+      <div class="info-section">
+        <div class="info-front">
+          <!-- Placeholder for labels -->
+          <p>Name:</p>
+          <p>Age:</p>
+          <p>Email:</p>
+          <p>Weight:</p>
+          <p>Height:</p>
+        </div>
+        <div class="info-back">
+          <!-- Display user-specific data -->
+          <p>{{user.username}}</p>
+          <p>{{user.age}}</p>
+          <p>{{user.email}}</p>
+          <p>{{user.get_height()}}</p>
+          <p>{{user.get_weight()}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Form for entering date -->
+  <form action="/profile" method="POST">
+    <input type="number" name="day" id=""  min="1" max="30" placeholder="Day" required>
+    <input type="number" name="month" id=""  min="1" max="12" placeholder="Month" required>
+    <input type="number" name="year" min="2024" max="2034" placeholder="Year" required>
+    <input type="submit" value="Enter date">
+  </form>
+  {% with messages = get_flashed_messages()%}
+  {% if messages%}
+      {% for message in messages%}
+      <p style="color:rgb(176, 12, 12); text-align: center;" class="flashed-error">{{message}}</p>
+      {%endfor%}
+      {%endif%}
+      {%endwith%}
+  <!-- Display exercise log if showing is true -->
+  {% if showing %}
+  <div class="log" >
+    <h1>{{ day }} Log</h1>
+    <table class="table">
+      <tr class="table-header">
+        <th>Exercise</th>
+        <th>Sets</th>
+        <th>Reps</th>
+        <th>Muscle Group</th>
+      </tr>
+      
+      <!-- Loop through exercise log data -->
+      {% for data in showing %}
+      {% if data[day] %}
+      <tr class="data-rows">
+        <td>{{ data[day]["exercise"] }}</td>
+        <td>{{ data[day]["sets"] }}</td>
+        <td>{{ data[day]["reps"] }}</td>
+        <td>{{ data[day]["muscle targeted"] }}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+      
+    </table>
+  </div>
+  {% endif %}
+</div>
+
+<!-- Footer section -->
+<div class="footer">
+  <p>Application by: Omer Mohamed Mahmoud </p>
+  <p><a style="text-decoration: none;" href="https://github.com/LinkBroken">Github Link</a></p>
+</div>
+
+<script src="/static/js/navToggle.js"></script>
+{% endblock %}
+</body>
+</html>

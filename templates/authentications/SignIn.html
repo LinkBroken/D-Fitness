@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="/static/css/Sign In.css">
+
+</head>
+
+<body>
+    <div class="main">
+
+    <div class="login-form">
+        <h3>Sign In</h3>
+    <form action="/login" class="form" method="POST">
+        <h3>Email</h3> <input placeholder="Email" type="email" name="email" id="email" required>
+        <h3>Password</h3> <input placeholder="Password" type="password" name="password" id="pass" required>
+        <br><input type="submit" class="submit" value="Sign In">
+        
+    </form>
+    <button><a style="text-decoration: none; color :white" href="/register"> Register</a></button>
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+    <li style="list-style: none; color: red; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">{{ message }}</li>
+    {% endfor %}
+    {% endwith %}
+
+    </div>
+  
+</div>
+</body>
+</html>

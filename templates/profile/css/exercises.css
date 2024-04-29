@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.exercises {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-gap: 50px;
+    justify-items: center;
+    justify-content:center;
+    margin-top: 5rem;
+}
+
+.exercise {
+    background-color: rgb(35, 35, 35);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.exercise:hover {
+    transform: scale(1.1);
+    transition: 0.7s ease;
+}
+
+.exercise img {
+    width: 70%;
+    border-radius: 8px;
+}
+
+input[type="number"],
+input[type="text"] {
+    margin-bottom: 15px;
+    display: block;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    margin: 0 auto;
+    width: 80%;
+}
+
+input[type="submit"] {
+    background-color: #c2d3fb;
+    border-radius: 100px;
+    box-shadow: rgba(44, 87, 187, 0.2) 0 -25px 18px -14px inset,rgba(56, 44, 187, 0.15) 0 1px 2px,rgba(44, 44, 187, 0.15) 0 2px 4px,rgba(56, 44, 187, 0.15) 0 4px 8px,rgba(44, 46, 187, 0.15) 0 8px 16px,rgba(44, 51, 187, 0.15) 0 16px 32px;
+    color: blue;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #00796b;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.flashed-error{
+ color: red;
+position: absolute;
+top:40px
+}

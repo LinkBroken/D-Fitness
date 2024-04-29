@@ -1,0 +1,26 @@
+
+{% block nav %}
+<script src="https://kit.fontawesome.com/04aa87af1f.js" crossorigin="anonymous"></script>
+<i id ="show-nav"class=" fa-solid fa-bars"></i>
+
+<div class="nav-bar">
+    
+    <!-- Navigation links -->
+    <div class="links">
+     <a href={{ url_for('views.home') }} id="sign-out">Home</a> 
+     <a href={{ url_for('views.profile') }} id="sign-out">Profile</a> 
+     <a href={{ url_for('views.trainer') }} id="sign-out">Exercises</a> 
+    </div>
+
+    <div class="welcome">
+        <h2>Welcome {{current_user.username}}</h2>
+        <i style="position: relative; left:0px" class="fa fa-user" aria-hidden="true"></i>
+        </div>
+    <a href={{ url_for('auth.logout') }} id="sign-out">Sign Out</a> 
+</div>
+
+
+{% endblock %}
+{% block body %}
+
+{% endblock %}
