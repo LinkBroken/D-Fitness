@@ -19,7 +19,7 @@ install-ed`)?
 
 
 ```bash
-flask --app app run
+flask --app main run
 ```
 ## Project Checklist
 - [*] It is available on GitHub. 
