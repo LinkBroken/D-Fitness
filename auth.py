@@ -38,7 +38,7 @@ def login():
                 if not validate(email):
                     flash("Invalid email", category="error")
     # Render login template
-    return render_template("SignIn.html")
+    return render_template("authentications/SignIn.html")
 
 # Route for user registration
 @Auth.route("/register", methods=["GET", "POST"])
@@ -71,11 +71,10 @@ def signup():
                 new_user = User(username=username, age=age, weight=weight, height=height, email=email, password=password)
                 db.session.add(new_user)
                 db.session.commit()
-                # Log in the new user and redirect to home page
-                login_user(new_user)
-                return redirect(url_for("views.home"))
+                # Go the log in page after signing up
+                return redirect(url_for("auth.login"))
     # Render registration template
-    return render_template("Signup.html")
+    return render_template("authentications/Signup.html")
 
 # Route for user logout
 @Auth.route("/logout")

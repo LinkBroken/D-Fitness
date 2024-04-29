@@ -15,6 +15,12 @@ install-ed`)?
 * Flask_Login (pip3 install flask_login)
 * flask_sqlalchemy (pip3 install flask_sqlalchemy)
 
+## How to run
+
+
+```bash
+flask --app app run
+```
 ## Project Checklist
 - [*] It is available on GitHub. 
 - [*] It uses the Flask web framework.
@@ -25,8 +31,12 @@ app.
 
 - Module names:
 
-datetime, os, json, calendar
-
+```python3
+datetime
+os
+json
+calendar
+```
 - [*] It contains at least one class written by you that has
 both properties and methods. It uses `__init__()` to let the
 class initialize the object's attributes (note that
@@ -79,11 +89,11 @@ and the line number(s) of at least
 one example of a loop in your code.
 - File name:
 
-exercises.js
+profile.html
 
 - Line number(s):
 
-117 
+55 
 
 - [*] It lets the user enter a value in a text box at some
 point.
