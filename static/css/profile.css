@@ -140,3 +140,13 @@ border-radius: 10px;
 .data-rows{
     background-color: #f2f2f2; border: 6px rgb(224, 219, 219);
 }
+@media only screen and (max-width: 800px) {
+    .nav-bar {
+     flex-direction: column;
+     gap: 15px;
+    }
+    .profile{
+        display: block;
+        position: relative;
+    }
+}
