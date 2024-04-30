@@ -23,6 +23,9 @@ def login():
             # Check if email field is empty
             if email == "":
                 flash("empty email, fill it please", category="error")
+            # Validate email format
+            elif not validate(email):
+                flash("Invalid email", category="error")
             elif user:
                 # Check if password field is empty or password is incorrect
                 if user.password == "":
@@ -33,10 +36,7 @@ def login():
                     # Log in the user and redirect to home page
                     login_user(user, remember=True)
                     return redirect(url_for("views.home"))
-            else:
-                # Validate email format
-                if not validate(email):
-                    flash("Invalid email", category="error")
+                
     # Render login template
     return render_template("authentications/SignIn.html")
 
