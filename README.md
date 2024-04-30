@@ -12,9 +12,10 @@ Did you add any additional modules that someone needs to
 install (for instance anything in Python that you `pip
 install-ed`)?
 
-* Flask_Login (pip3 install flask_login)
-* flask_sqlalchemy (pip3 install flask_sqlalchemy)
-
+```bash
+Flask_Login (pip3 install flask_login)
+flask_sqlalchemy (pip3 install flask_sqlalchemy)
+```
 ## How to run
 
 
