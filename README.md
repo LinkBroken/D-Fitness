@@ -12,15 +12,19 @@ Did you add any additional modules that someone needs to
 install (for instance anything in Python that you `pip
 install-ed`)?
 
+## Dependencies
 ```bash
-Flask_Login (pip3 install flask_login)
-flask_sqlalchemy (pip3 install flask_sqlalchemy)
+pip3 install flask_login
+pip3 install flask_sqlalchemy
 ```
 ## How to run
-
-
+### Normal Mode
 ```bash
 flask --app main run
+```
+### Debug Mode
+```bash
+flask --app main --debug run
 ```
 ## Project Checklist
 - [*] It is available on GitHub. 
@@ -49,7 +53,7 @@ well as the names of two properties and two methods.
 
 - File name for the class definition:
 
-models.py
+** models.py **
 
 - Line number(s) for the class definition:
 
