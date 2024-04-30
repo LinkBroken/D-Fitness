@@ -60,6 +60,6 @@ def exercise(exercise):
                 flash("Sets and Reps are numbers", category = "error")
         return render_template(f"exercises/{exercise}.html")
     except: # If the route doesn't exist, the user will go to the error page
-        return render_template("errorpage/errorPage.html")
+        return render_template("error_page/errorPage.html")
         # flash("Sets and Reps are numbers", category = "error")
 
