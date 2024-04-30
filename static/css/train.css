@@ -26,7 +26,7 @@ h4 {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .muscle-groups > div > h3 {
@@ -83,7 +83,9 @@ h4 {
         grid-template-columns: 250px 250px;
         align-items: center;
         justify-content: space-evenly;
-}
+        overflow-x: hidden;
+        width: 90%;
+}       
         }
 @media only screen and (max-width: 1000px) {
     .nav-bar {
@@ -94,6 +96,8 @@ h4 {
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden;
+            width: 90%;
         }
         
     }
