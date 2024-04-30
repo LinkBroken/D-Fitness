@@ -95,3 +95,22 @@ i{
     box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
 
 }
+
+
+@media only screen and (max-width: 600px) {
+    .nav-bar {
+     flex-direction: column;
+     gap: 15px;
+    
+    }
+    .main{
+        display: grid;
+        margin-top: 30px;
+        grid-template-columns: 250px;
+        place-items: center;
+    }
+    
+    .info{
+        flex-direction: column;
+    }
+  }
