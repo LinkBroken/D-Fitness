@@ -10,7 +10,8 @@ body {
 .main{
     display: flex;
     flex-direction: row-reverse;
-    margin: 0 auto
+    margin: 0 auto;
+    justify-content: space-evenly;
 }
 .container {
     display: flex;
