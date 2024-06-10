@@ -1,4 +1,4 @@
-[!ALT](LogPage.png)
+!(LogPage.png)
 # MY FINAL PROJECT
 A one or two sentence description of your project here.
 - What does it do?
